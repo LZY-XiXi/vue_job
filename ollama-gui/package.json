@@ -1,0 +1,51 @@
+{
+  "name": "ollama-gui",
+  "version": "0.0.0",
+  "description": "Ollama GUI",
+  "author": "Lin",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "start": "electron-vite build && electron-builder --win"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.1",
+    "@ts-stack/markdown": "^1.5.0",
+    "highlight.js": "^11.11.1",
+    "pinia": "^3.0.1",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.13.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "electron": "^34.3.0",
+    "electron-builder": "^25.1.8",
+    "electron-devtools-installer": "^4.0.0",
+    "electron-vite": "^3.0.0",
+    "npm-run-all2": "^7.0.2",
+    "sass-embedded": "^1.85.0",
+    "typescript": "~5.7.3",
+    "vite": "^6.1.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vite-plugin-vue-setup-extend": "0.4.0",
+    "vue-tsc": "^2.2.2"
+  },
+  "packageManager": "pnpm@10.6.2+sha512.47870716bea1572b53df34ad8647b42962bc790ce2bf4562ba0f643237d7302a3d6a8ecef9e4bdfc01d23af1969aa90485d4cebb0b9638fa5ef1daef656f6c1b",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "electron",
+      "esbuild"
+    ]
+  }
+}
